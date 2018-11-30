@@ -12,16 +12,16 @@
         <!--Data View Controller-->
         <scene sceneID="OQY-xm-YOt">
             <objects>
-                <tableViewController id="O5V-cN-XnI" customClass="DataViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n6O-gJ-neO" customClass="dataIdentifier">
+                <tableViewController id="O5V-cN-XnI" customClass="DataViewController" customModule="DataApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n6O-gJ-neO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="315-lz-GQK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataIdentifier" id="315-lz-GQK" customClass="BucketItemCell" customModule="DataApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="315-lz-GQK" id="LjG-fm-HBZ" customClass="BucketItemCell">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="315-lz-GQK" id="LjG-fm-HBZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -48,12 +48,14 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bucketItemSignature" destination="Vc6-QL-FCE" id="dZx-IM-wOv"/>
+                                    <outlet property="bucketItemSymbol" destination="O39-go-zuw" id="poy-ny-Hvi"/>
+                                    <outlet property="bucketItemText" destination="0tN-fP-XzW" id="93b-Ec-eru"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="bucketItemSignature" destination="Vc6-QL-FCE" id="y6e-Sm-jKo"/>
-                            <outlet property="bucketItemSymbol" destination="O39-go-zuw" id="AxT-WV-jBh"/>
-                            <outlet property="bucketItemText" destination="LjG-fm-HBZ" id="cpO-Vm-kWc"/>
                             <outlet property="dataSource" destination="O5V-cN-XnI" id="9Ne-Uk-Z6n"/>
                             <outlet property="delegate" destination="O5V-cN-XnI" id="gKH-E7-NKd"/>
                         </connections>
